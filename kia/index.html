@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Ucup mo minta maap</title>
+</head>
+<body>
+    <!-- Container -->
+    <div class="flex flex-col w-screen h-screen bg-pink-100">
+
+        <!-- Card -->
+        <div class="flex flex-col h-screen items-center bg-white rounded-2xl gap-6 shadow-xl p-6 m-6">
+
+            <!-- Image -->
+            <img id="photo" class=w-72 src="https://c.tenor.com/yLPF2ku83OoAAAAi/peach-emm.gif" alt="sorry">
+
+            <!-- Title -->
+            <h1 id="title" class="text-center font-semibold text-2xl">Kia, maafin aku ya...</h1>
+
+            <!-- Button Yes -->
+            <button id="iya" class="bg-pink-500 text-white py-4 px-12 rounded-2xl text-center font-semibold text-lg animation duration-200 hover:bg-pink-600">
+                Iyaaa
+            </button>
+
+            <!-- Button No -->
+            <button id="gamaw" class="text-black font-semibold text-center">
+                Gamaw
+            </button>
+            
+        </div>
+    </div>
+
+    <script>
+        let iya = document.getElementById('iya')
+        let gamaw = document.getElementById('gamaw')
+
+        iya.addEventListener('click', function() {
+            document.getElementById('photo').src = 'https://c.tenor.com/hYq-uxUwOG4AAAAi/mochi-mochimochi.gif';
+            document.getElementById('title').innerHTML = "Makasiiii bebihh &hearts; &hearts; &hearts; &hearts;"
+            iya.innerHTML = 'Loppp yuu'
+            gamaw.className += ' hidden'
+        });
+
+        gamaw.addEventListener('click', function() {
+            document.getElementById('gamaw').innerHTML = 'Harus Maw!!'
+        })
+    </script>
+</body>
+</html>
